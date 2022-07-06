@@ -1,0 +1,32 @@
+.optionItem {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  background-color: white;
+  color: gray;
+  margin: 15px;
+}
+
+.optionCounter {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: black;
+}
+
+.optionCounterBtn {
+  width: 30px;
+  height: 30px;
+  color: #0071c2;
+  border: 1px solid #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterBtn:disabled {
+  color: lightgray;
+  border: 1px solid lightgray;
+  cursor: not-allowed;
+}
