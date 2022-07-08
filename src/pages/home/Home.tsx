@@ -1,5 +1,7 @@
+import EmailContainer from '../../components/emailContainer/EmailContainer';
 import Featured from '../../components/featured/Featured';
 import FeaturedProperty from '../../components/featuredProperty/FeaturedProperty';
+import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import Navbar from '../../components/navbar/Navbar';
 import Property from '../../components/property/Property';
@@ -16,6 +18,8 @@ const Home = () => {
         <Property />
         <h1 className={styles.homeTitle}>Homes guests love</h1>
         <FeaturedProperty />
+        <EmailContainer />
+        <Footer />
       </div>
     </div>
   );
