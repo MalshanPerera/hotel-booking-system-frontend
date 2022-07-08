@@ -1,11 +1,11 @@
-import FooterItem from '../footerItemList/FooterItemList';
+import FooterItemList from '../footerItemList/FooterItemList';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.fLists}>
-        <FooterItem
+        <FooterItemList
           items={[
             'Countries',
             'Regions',
@@ -15,7 +15,7 @@ const Footer = () => {
             'Hotels',
           ]}
         />
-        <FooterItem
+        <FooterItemList
           items={[
             'Homes',
             'Apartments',
@@ -25,7 +25,7 @@ const Footer = () => {
             'Guest Houses',
           ]}
         />
-        <FooterItem
+        <FooterItemList
           items={[
             'Unique Places to Stay',
             'Reviews',
@@ -34,7 +34,7 @@ const Footer = () => {
             'Seasonal and holiday deals',
           ]}
         />
-        <FooterItem
+        <FooterItemList
           items={[
             'Car Rental',
             'Flight Finder',
@@ -42,7 +42,7 @@ const Footer = () => {
             'Travel Agents',
           ]}
         />
-        <FooterItem
+        <FooterItemList
           items={[
             'Customer Service',
             'Partner Help',

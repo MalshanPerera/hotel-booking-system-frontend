@@ -4,7 +4,7 @@ interface FooterItemListProps {
   items: string[];
 }
 
-const FooterItems = ({ items }: FooterItemListProps) => {
+const FooterItemList = ({ items }: FooterItemListProps) => {
   return (
     <ul className={styles.fList}>
       {items.map((item, index) => {
@@ -18,4 +18,4 @@ const FooterItems = ({ items }: FooterItemListProps) => {
   );
 };
 
-export default FooterItems;
+export default FooterItemList;
