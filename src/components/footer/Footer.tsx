@@ -55,7 +55,7 @@ const Footer = () => {
           ]}
         />
       </div>
-      <div className='fText'>Copyright © 2022 Lamabooking.</div>
+      <div className={styles.fText}>Copyright © 2022 Lamabooking.</div>
     </div>
   );
 };
