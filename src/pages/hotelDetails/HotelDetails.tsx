@@ -122,7 +122,7 @@ const HotelDetails = () => {
                 also offered, as well as an electric tea pot and a coffee
                 machine. Popular points of interest near the apartment include
                 Cloth Hall, Main Market Square and Town Hall Tower. The nearest
-                airport is John Paul II International Kraków–Balice, 16.1 km
+                airport is John Paul II International Kraków-Balice, 16.1 km
                 from Tower Street Apartments, and the property offers a paid
                 airport shuttle service.
               </p>

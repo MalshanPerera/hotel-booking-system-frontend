@@ -29,7 +29,7 @@ const SearchedHotels = () => {
   ]);
 
   const [newOptions, setOptions] = useState<OptionsModel>(
-    new OptionsModel(1, 0, 1)
+    new OptionsModel(options.adults, options.children, options.rooms)
   );
 
   const handleOptions = (option: OptionTypes, operation: MathOperation) => {
@@ -81,14 +81,14 @@ const SearchedHotels = () => {
             <div className={styles.searchedItems}>
               <label>Options</label>
               <span onClick={() => setOpenOptions(!openOptions)}>
-                {options.adults} adults • {options.children} children •{' '}
-                {options.rooms} room
+                {newOptions.adults} adults • {newOptions.children} children •{' '}
+                {newOptions.rooms} room
               </span>
               {openOptions && (
                 <div className={styles.options}>
                   <OptionItem
                     text='Adults'
-                    count={options.adults}
+                    count={newOptions.adults}
                     onAdd={() =>
                       handleOptions(OptionTypes.Adults, MathOperation.Add)
                     }
@@ -98,7 +98,7 @@ const SearchedHotels = () => {
                   />
                   <OptionItem
                     text='Children'
-                    count={options.children}
+                    count={newOptions.children}
                     onAdd={() =>
                       handleOptions(OptionTypes.Children, MathOperation.Add)
                     }
@@ -111,7 +111,7 @@ const SearchedHotels = () => {
                   />
                   <OptionItem
                     text='Rooms'
-                    count={options.rooms}
+                    count={newOptions.rooms}
                     onAdd={() =>
                       handleOptions(OptionTypes.Rooms, MathOperation.Add)
                     }

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
-        <div className={styles.fLists}>
+        <div className={styles.footerLists}>
           <FooterItemList
             items={[
               'Countries',
@@ -56,7 +56,7 @@ const Footer = () => {
             ]}
           />
         </div>
-        <div className={styles.fText}>Copyright © 2022 Lamabooking.</div>
+        <div className={styles.footerText}>Copyright © 2022 Lamabooking.</div>
       </div>
     </div>
   );
