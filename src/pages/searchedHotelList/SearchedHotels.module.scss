@@ -1,0 +1,99 @@
+.searchedHotelsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.searchedHotelsWrapper {
+  width: 100%;
+  display: flex;
+  max-width: 1024px;
+  gap: 20px;
+}
+
+.searchedHotelsSearch {
+  flex: 1;
+  background-color: #febb02;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  height: max-content;
+}
+
+.searchedHotelsSearchTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.searchedItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.searchedItems > label {
+  font-size: 12px;
+}
+
+.searchedItems > input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  height: 25px;
+  font-size: 14px;
+}
+
+.searchedItems > span {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  height: 25px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.datePicker {
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  top: 55px;
+  box-shadow: 0px 0px 35px -16px rgba(122, 113, 113, 0.53);
+  -webkit-box-shadow: 0px 0px 35px -16px rgba(122, 113, 113, 0.53);
+  -moz-box-shadow: 0px 0px 35px -16px rgba(122, 113, 113, 0.53);
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  top: 55px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 35px -16px rgba(122, 113, 113, 0.53);
+  -webkit-box-shadow: 0px 0px 35px -16px rgba(122, 113, 113, 0.53);
+  -moz-box-shadow: 0px 0px 35px -16px rgba(122, 113, 113, 0.53);
+}
+
+.searchBtn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0071c2;
+  border-radius: 5px;
+  background-color: #0071c2;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.searchedHotelsResults {
+  flex: 3;
+}

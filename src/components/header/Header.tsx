@@ -11,18 +11,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
 import styles from './Header.module.scss';
-import 'react-date-range/dist/styles.css'; // main style file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 import DatePickerModel from '../../models/DatePickerModel';
 import OptionsModel from '../../models/OptionsModel';
 import { MathOperation, OptionTypes } from '../../helper/enums';
 import OptionItem from '../optionItem/OptionItem';
+import { useNavigate } from 'react-router-dom';
+import { SearchProps } from '../../helper/interfaces';
 
 interface HomeProps {
   type?: string;
 }
 
 const Header = ({ type }: HomeProps) => {
+  const [destination, setDestination] = useState<string>('');
+
   const [openDatePicker, setOpenDatePicker] = useState<Boolean>(false);
   const [openOptions, setOpenOptions] = useState<Boolean>(false);
 
@@ -34,12 +38,20 @@ const Header = ({ type }: HomeProps) => {
     new OptionsModel(1, 0, 1)
   );
 
+  const navigator = useNavigate();
+
   const handleOptions = (option: OptionTypes, operation: MathOperation) => {
     setOptions((prev) => {
       return {
         ...prev,
         [option]: prev[option] + (operation === MathOperation.Add ? 1 : -1),
       };
+    });
+  };
+
+  const handleSearch = () => {
+    navigator('/hotels', {
+      state: { destination, date, options } as SearchProps,
     });
   };
 
@@ -91,6 +103,7 @@ const Header = ({ type }: HomeProps) => {
                   type='text'
                   placeholder='Where are you going?'
                   className={styles.headerSearchInput}
+                  onChange={(e) => setDestination(e.target.value)}
                 ></input>
               </div>
               <div className={styles.headerSearchItem}>
@@ -116,6 +129,7 @@ const Header = ({ type }: HomeProps) => {
                     moveRangeOnFirstSelection={false}
                     ranges={date}
                     className={styles.datePicker}
+                    minDate={new Date()}
                   />
                 )}
               </div>
@@ -176,7 +190,16 @@ const Header = ({ type }: HomeProps) => {
                 )}
               </div>
               <div className={styles.headerSearchItem}>
-                <button className={styles.headerSearchBtn}>Search</button>
+                <button
+                  className={styles.headerSearchBtn}
+                  onClick={() => {
+                    setOpenDatePicker(false);
+                    setOpenOptions(false);
+                    handleSearch();
+                  }}
+                >
+                  Search
+                </button>
               </div>
             </div>
           </Fragment>
