@@ -18,9 +18,9 @@ const Home = () => {
         <Property />
         <h1 className={styles.homeTitle}>Homes guests love</h1>
         <FeaturedProperty />
-        <EmailContainer />
-        <Footer />
       </div>
+      <EmailContainer />
+      <Footer />
     </div>
   );
 };

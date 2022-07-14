@@ -140,9 +140,9 @@ const HotelDetails = () => {
             </div>
           </div>
         </div>
-        <EmailContainer />
-        <Footer />
       </div>
+      <EmailContainer />
+      <Footer />
     </div>
   );
 };

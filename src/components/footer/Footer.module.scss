@@ -1,7 +1,13 @@
 .footer {
-  width: 100%;
-  width: 1024px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footerContainer {
   font-size: 12px;
+  width: 100%;
+  max-width: 1024px;
 }
 
 .fLists {

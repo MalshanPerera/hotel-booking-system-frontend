@@ -1,12 +1,16 @@
-.mailContainer {
-  width: 97.1%;
+.mail {
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
   margin-top: 50px;
+}
+
+.mailContainer {
+  width: 100%;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #003580;
   color: white;
   gap: 20px;
 }
